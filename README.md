@@ -1,7 +1,26 @@
-# CarND-Controls-MPC
+# CarND-Controls-MPC  
+
 Self-Driving Car Engineer Nanodegree Program
 
+### Yulong Li  
+
 ---
+## The Model  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Dependencies
 
