@@ -4,7 +4,13 @@ Self-Driving Car Engineer Nanodegree Program
 
 ### Yulong Li  
 
----
+---  
+## Demo  
+![sample](https://github.com/yulongl/CarND-MPC-Project/blob/master/pic/sample.gif)  
+
+Green curve: MPC predicted trajectory  
+Yellow curve: reference trajectory  
+
 ## The Model  
 
 kinematic model:  
