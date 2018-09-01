@@ -24,15 +24,35 @@ cte: cross-track error;
 epsi: orientation error.   
 
 
+## Timestep Length and Elapsed Duration (N & dt)  
+
+N = 25;  
+dt = 0.05.  
+
+N and dt are exactly the same as in MPC quize. I didn't change them because I'm getting a good result with them.  
 
 
+## Polynomial Fitting and MPC Preprocessing  
+
+Converted way points from map coordinate to vehicle coordinate before polyfit. I did try using the map coordinate to do polyfit and other calculations (see main_map_co.cpp), but I was getting very unstable reference trajectory which changed dramatically following the vehicle heading direction, so I switched to vehicle coordinate. However, I still don't understand why the map coordinate trajectory is so unstable.  
+
+Polyfit is performed after coordinate conversion. Then cte and epsi are calculated.  
 
 
+## Model Predictive Control with Latency  
 
+```  
+//adding 100ms delay
+          double px_c = px + v * cos(psi) * 0.1;
+          double py_c = py + v * sin(psi) * 0.1;
+          double psi_c = psi - v * delta / 2.67 * 0.1;
+          double v_c = v + a * 0.1;
+          double cte_c = (f0 - py) + (v * sin(epsi) * 0.1);
+          double epsi_c = epsi - v * delta / 2.67 * 0.1;
+```  
+Vehicle state of after 100ms is predicted as above before fed into solver.  
 
-
-
-
+---  
 
 
 ## Dependencies
