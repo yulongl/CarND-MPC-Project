@@ -17,7 +17,7 @@ kinematic model:
 
 ![model](https://github.com/yulongl/CarND-MPC-Project/blob/master/pic/model.JPG)  
 
-(xy, yt): vehicle coordinates;  
+(xt, yt): vehicle coordinates;  
 psi: angle between heading direction and x axle;  
 v: vehicle speed;  
 cte: cross-track error;  
