@@ -7,8 +7,15 @@ Self-Driving Car Engineer Nanodegree Program
 ---
 ## The Model  
 
+kinematic model:  
 
+![model](https://github.com/yulongl/CarND-MPC-Project/blob/master/pic/model.JPG)  
 
+(xy, yt): vehicle coordinates;  
+psi: angle between heading direction and x axle;  
+v: vehicle speed;  
+cte: cross-track error;  
+epsi: orientation error.   
 
 
 
